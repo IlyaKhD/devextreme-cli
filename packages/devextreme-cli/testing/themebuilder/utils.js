@@ -16,7 +16,7 @@ module.exports.prepareDirectory = async(devextremeVersion, themeBuilderVersion, 
     if(themeBuilderVersion) {
         await runCommand('npm', ['install', `devextreme-themebuilder@${themeBuilderVersion}`, '--save-exact'], { cwd: workDirectory });
     }
-    // we need to install cli as tgz (npm i for folder make symlink and require works in wrong way)
+    // we need to install cli as tgz (regular install for folder make symlink and require works in wrong way)
     await runCommand('npm', ['install', `../../../devextreme-cli-${cliVersion}.tgz`, '--save-exact'], { cwd: workDirectory });
 };
 
