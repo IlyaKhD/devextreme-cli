@@ -18,7 +18,7 @@ if (lockedVersion !== expectedVersion) {
     console.error(`ERROR: create-next-app version mismatch`);
     console.error(`  latest-versions.js: ${expectedVersion}`);
     console.error(`  scripts/regenerate-nextjs-apps/package.json: ${lockedVersion}`);
-    console.error(`\nUpdate package.json and run 'npm install' in scripts/regenerate-nextjs-apps/`);
+    console.error(`\nUpdate package.json and install dependencies in scripts/regenerate-nextjs-apps/`);
     process.exit(1);
 }
 
